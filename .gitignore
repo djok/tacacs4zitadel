@@ -10,8 +10,8 @@
 *.dll
 *.so
 *.dylib
-tacacs-server
-test-client
+/tacacs-server/tacacs-server
+/test-client/test-client
 
 # Go test files
 *.test
