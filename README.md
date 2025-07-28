@@ -12,6 +12,12 @@ A robust TACACS+ authentication server that integrates with Zitadel Identity Pro
 - **Health Monitoring**: Built-in health checks and metrics endpoints
 - **Token Caching**: Intelligent caching for improved performance
 
+## 📖 Documentation
+
+- **[README.md](README.md)** - Main project documentation
+- **[SETUP.md](SETUP.md)** - Detailed setup instructions
+- **[ZITADEL_CONFIGURATION.md](ZITADEL_CONFIGURATION.md)** - Complete Zitadel configuration guide
+
 ## 📋 Prerequisites
 
 - Docker (>= 20.10)
@@ -73,18 +79,17 @@ TOKEN_CACHE_TIMEOUT=300
 
 ### Zitadel Setup
 
+For detailed Zitadel configuration instructions, see [**ZITADEL_CONFIGURATION.md**](ZITADEL_CONFIGURATION.md).
+
+**Quick Setup:**
 1. Access Zitadel Console at `http://localhost:8080/ui/console`
-2. Login with default credentials:
-   - Username: `zitadel-admin@zitadel.localhost`
-   - Password: `Password1!`
+2. Complete initial setup and create admin user
 3. Create a new project for TACACS+
-4. Create an application with OAuth2 client credentials flow
-5. Add users and assign roles:
-   - `network-admin` - Full administrative access
-   - `network-user` - Standard user access  
-   - `network-readonly` - Read-only access
-6. Update `.env` file with the generated credentials
-7. Restart services: `docker-compose restart tacacs-server`
+4. Create an API application with client credentials
+5. Configure roles: `network-admin`, `network-user`, `network-readonly`
+6. Create users and assign appropriate roles
+7. Update `.env` file with the generated credentials
+8. Restart services: `docker-compose restart tacacs-server`
 
 ## 📡 Network Device Configuration
 
