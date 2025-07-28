@@ -1,0 +1,50 @@
+Log:
+  Level: info
+  Formatter:
+    Format: text
+
+DefaultInstance:
+  DomainPolicy:
+    UserLoginMustBeDomain: false
+    ValidateOrgDomains: false
+  LoginPolicy:
+    AllowDomainDiscovery: true
+    AllowRegister: true
+    AllowUsernamePassword: true
+    AllowExternalIDP: false
+    HidePasswordReset: false
+  LabelPolicy:
+    PrimaryColor: "#5469d4"
+    BackgroundColor: "#fafafa"
+    FontColor: "#000000"
+  PasswordComplexityPolicy:
+    MinLength: 8
+    HasLowercase: true
+    HasUppercase: true
+    HasNumber: true
+    HasSymbol: false
+  LockoutPolicy:
+    MaxPasswordAttempts: 10
+    MaxOTPAttempts: 10
+  PrivacyPolicy:
+    TOSLink: ""
+    PrivacyLink: ""
+  Org:
+    Name: "TACACS+ Organization"
+    Domain: "tacacs.local"
+    Human:
+      FirstName: "Admin"
+      LastName: "User"
+      Email: "admin@tacacs.local"
+      PreferredLanguage: "en"
+    Machine:
+      Name: "tacacs-machine-user"
+      MachineKey:
+        ExpirationDate: "2030-01-01T00:00:00Z"
+
+Database:
+  Postgres:
+    MaxOpenConns: 25
+    MaxIdleConns: 5
+    MaxConnLifetime: 30m
+    MaxConnIdletime: 5m

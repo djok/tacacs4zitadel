@@ -1,0 +1,76 @@
+# Environment files
+.env
+.env.local
+.env.production
+.env.staging
+
+# Go binaries
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+tacacs-server
+test-client
+
+# Go test files
+*.test
+
+# Go coverage files
+*.out
+*.cover
+
+# Go modules cache
+go.sum
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Docker volumes
+postgres_data/
+zitadel_data/
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+tmp/
+temp/
+
+# Database dumps
+*.sql
+*.dump
+
+# Certificates and keys
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+
+# Backup files
+*.backup
+*.bak
+*.old
+
+# Editor swap files
+.*.swp
+.*.swo
+
+# Local development
+local/
+dev/
